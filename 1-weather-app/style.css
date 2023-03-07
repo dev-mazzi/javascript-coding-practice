@@ -51,14 +51,14 @@ body {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color:rgba(49, 77, 236, 0.2);
+    background-color: rgba(49, 77, 236, 0.2);
     color: rgba(49, 77, 236, 1);
     font-size: 18px;
     cursor: pointer;
 }
 
 .search-box button:hover {
-    background-color:rgba(49, 77, 236, 1);
+    background-color: rgba(49, 77, 236, 1);
     color: #fff;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .weather-box {
-    display: inline-block;
+    display: block;
     text-align: center;
 }
 
@@ -114,7 +114,8 @@ body {
     width: 50%;
 }
 
-.weather-box, .weather-detail {
+.weather-box,
+.weather-detail {
     scale: 0;
     opacity: 0;
 }
