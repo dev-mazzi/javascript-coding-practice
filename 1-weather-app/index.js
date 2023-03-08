@@ -1,10 +1,10 @@
 const container = document.querySelector('.container');
-const search = document.querySelector('.search-box button');
+const form = document.querySelector('.search-box');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetail = document.querySelector('.weather-detail');
 const notFound = document.querySelector('.not-found');
 
-search.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
     const APIKey = '3e92d2cd10eec69827f934b304056e4d';
     const city = document.querySelector('.search-box input').value;
 
@@ -68,5 +68,7 @@ search.addEventListener('click', () => {
         container.style.height = '500px';
 
     });
+
+    e.preventDefault();
 }
 );
