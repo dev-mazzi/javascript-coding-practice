@@ -148,14 +148,14 @@ body {
 }
 
 .edit {
-    margin-left: auto;
+    margin-left: 1em;
 }
 
 .edit,
 .delete {
-    background-color: transparent;
+    background: transparent;
     cursor: pointer;
-    margin-right: 1.5em;
+    margin-right: 1em;
     border: none;
     color: #587ef4;
 }

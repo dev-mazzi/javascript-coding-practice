@@ -21,10 +21,12 @@ totalAmountButton.addEventListener('click', () => {
     } else {
         errorMessage.classList.add('hide');
         // Set budget
-        amount.innerHTML = tempAmount;
-        balanceValue.innerHTML = tempAmount - expenditureValue.innerHTML;
+        const addAmount = parseInt(tempAmount) + parseInt(amount.innerHTML);
+        amount.innerHTML = addAmount;
+        balanceValue.innerHTML = addAmount - expenditureValue.innerHTML;
         // Clear input
         totalAmount.value = "";
+        tempAmount = addAmount;
     }
 });
 
@@ -62,7 +64,7 @@ const listCreator = (expenseName, expenseValue) => {
     subListContent.innerHTML = `<p class='product'>${expenseName}</p><p class='amount'>${expenseValue}</p>`;
 
     let editButton = document.createElement('button');
-    editButton.classList.add('fa-solid', 'fa-pen-to-sqaure', 'edit');
+    editButton.classList.add('fa-solid', 'fa-pen-to-square', 'edit');
     editButton.style.fontSize = '1.2em';
     editButton.addEventListener('click', () => {
         modifyElement(editButton, true);
@@ -96,6 +98,7 @@ checkAmountButton.addEventListener('click', () => {
 
     // Total expense (existing + new)
     let sum = parseInt(expenditureValue.innerText) + expenditure;
+    expenditureValue.innerText = sum;
 
     // Total balance = budget - total expense
     const totalBalance = tempAmount - sum;
