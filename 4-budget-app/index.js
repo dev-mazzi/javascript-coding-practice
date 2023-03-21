@@ -68,7 +68,7 @@ const listCreator = (expenseName, expenseValue) => {
         modifyElement(editButton, true);
     });
 
-    let deleteButton = document.createElement(button);
+    let deleteButton = document.createElement('button');
     deleteButton.classList.add('fa-solid', 'fa-trash-can', 'delete');
     deleteButton.style.fontSize = '1.2em';
     deleteButton.addEventListener('click', () => {
@@ -77,7 +77,7 @@ const listCreator = (expenseName, expenseValue) => {
 
     subListContent.appendChild(editButton);
     subListContent.appendChild(deleteButton);
-    document.getElementById('list').appentChild(subListContent);
+    document.getElementById('list').appendChild(subListContent);
 }
 
 // Add expenses function
